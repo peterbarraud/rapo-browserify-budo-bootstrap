@@ -1,6 +1,6 @@
 
 // Bootstrap wants jQuery global =(
-window.$ = window.jQuery = require('jquery');
+window.jQuery = $  = require('jquery');
 require('./src/js/main');
 window.Popper = require('popper.js');
 require('bootstrap');
@@ -10,6 +10,6 @@ require('bootstrap');
 
 // styles
 // to use Bootstrap 
-require('bootstrap/dist/css/bootstrap.css')
+require('bootstrap/dist/css/bootstrap.css');
 require('./src/styles/main.css');
 
