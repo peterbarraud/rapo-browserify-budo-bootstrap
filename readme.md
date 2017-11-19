@@ -8,6 +8,13 @@ So going a step on from my [Browserify-CSS template] (https://github.com/peterba
 * **./src**: This holds your JS and CSS source files. These are also referenced in `index.js`
 * **package.json**: This has a `start` script that runs the localhost. Since we're including Bootstrap, we'll need the `-g` flag for browserify-css. 
 
+## What about Bootstrap with SASS?
+Well, you can use the SASS version of Bootstrap, look in the `index.js` for a comment there.
+
+Of course, you're going to have to use a SASS tranform (like maybe SCSSIFY).
+
+Take a look at my [Browserify-SCCIFY](https://github.com/peterbarraud/rapo-browserify-budo-scssify) project for more details.
+
 ## Get going
 1. Clone this repo
 2. `cd` into the resultant dir
