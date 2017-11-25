@@ -24,4 +24,17 @@ Take a look at my [Browserify-SCCIFY](https://github.com/peterbarraud/rapo-brows
 That's it.
 
 ## Building the project for deployment
--- TODO --
+This is split into two parts
+* `build.js`: Builds the `JS` and `CSS` outputs
+* `html-dist.config`: Uses [html-dist](https://www.npmjs.com/package/html-dist) to inject the CSS into the HTML
+
+Then generate build:
+```
+npm run build
+```
+### Testing the build
+If you want to check the build - Just to make sure:
+```
+npm run testbuild
+```
+This runs `budo` on the build

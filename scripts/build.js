@@ -4,7 +4,7 @@ var buildJS = function(){
     console.log('Building index.js');
     var b = require('browserify')();
     b.add('src/js/main.js');
-    b.transform('uglifyify', { global: true  })
+    b.transform('uglifyify')
     var indexjs = fs.createWriteStream('build/index.js');
     b.bundle().pipe(indexjs);
     console.log('Done: Building index.js');
@@ -29,19 +29,6 @@ var buildCSS = function(){
     console.log('Done: Building index.css');
 }
 
-var buildHTML = function(){
-    fs.readFile('index.html', 'utf8', function(err, data){
-        if (err) {
-            return console.log(err);
-          }
-          var minify = require('html-minifier').minify;
-          var result = minify(data, {
-          removeAttributeQuotes: true
-          });
-          console.log(result);
-          fs.writeFileSync('build/index.html', result);
-      });
-};
 
 console.log("using rimraf just to first we clean out the entire build dir");
 require('rimraf')('build', function(){
@@ -55,7 +42,7 @@ require('rimraf')('build', function(){
             console.log("build the index.css");            
             buildCSS();
             console.log('build the index.html');
-            buildHTML();
+            // buildHTML();
         }
     });  
 });
